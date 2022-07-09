@@ -1,3 +1,10 @@
+/**
+ * 重点理解三个对象：
+ * 1. Texture: 存储纹理图片的原信息，可以认为它就是原图片或者部分原图片，每个 Texture 都引用了一个 BaseTexture（Texture.baseTexture）
+ * 2. BaseTexture: 用于管理 Texture，控制纹理是如何渲染的例如 wrapMode 和 uv 坐标
+ * 3. RenderTexture: 一个特殊的 Texture，继承自 Texture，允许在其上渲染 displayObj，可以使用 Render 在其上渲染东西
+ * 4. PIXI.Renderer
+ */
 import * as PIXI from "pixi.js";
 import bunnypng from "../assests/bunny.png";
 
@@ -40,8 +47,11 @@ app.stage.addChild(sprite);
 container.x = 100;
 container.y = 60;
 
-app.ticker.add(() => {
-    app.renderer.render(container, {
-        renderTexture: rt
-    });
+app.renderer.render(container, {
+    renderTexture: rt
 });
+// app.ticker.add(() => {
+//     app.renderer.render(container, {
+//         renderTexture: rt
+//     });
+// });
