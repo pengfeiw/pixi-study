@@ -20,7 +20,8 @@ app.stage.addChild(container);
 const texture = PIXI.Texture.from(bunnypng);
 
 // Create a 5x5 grid of bunnies
-// 每个 container 都有自己内部的一个局部坐标，这个坐标系是和一般 canvas 的坐标系是相同的，即原点在左上角，y 轴朝下，x 轴朝右
+// anchor 即锚点，bunny.anchor.set(0.5) 表示将锚点设置为 bunny 的中心点，默认的锚点为左上角
+// 锚点是 sprite 的定位点，如果 sprite 的坐标为 (100, 100)，即它的锚点所在位置的坐标为 (100, 100)
 for (let i = 0; i < 25; i++) {
     const bunny = new PIXI.Sprite(texture);
     bunny.anchor.set(0.5);
@@ -30,12 +31,14 @@ for (let i = 0; i < 25; i++) {
 }
 
 // Center bunny sprite in local container coordinates
-// 1.可以将 pivot 理解为[定位点]，container 在其所处的场景中用来定位的点，这里将它的定位点设置为 container 的中心点
+// 1. pivot 设置 container 的局部坐标系中的 obj 的 rotate、scale、skew 的中心
 // 2.pivot 并不是设置它内部的坐标系的原点
-// 下面的代码将它的 pivot 设置为中心点，并且它的坐标（container.x 和 container.y）设置为 (0, 0)，也就是将它的中心点
-// 置于它所在场景（父元素）的中心，即画布中心
 container.pivot.x = container.width / 2;
 container.pivot.y = container.height / 2;
+
+// container.width = 400;
+// container.height = 400;
+container.scale.set(2);
 
 // Move container to the center
 // app.screen.width: app 画布的宽度
