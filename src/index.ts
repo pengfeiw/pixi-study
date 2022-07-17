@@ -5,4 +5,6 @@
 // import "./examples/005_graphics_01";
 // import "./examples/005_graphics_02";
 // import "./examples/006_anchor";
-import "./examples/007_pivot";
+// import "./examples/007_pivot";
+// import "./examples/008_interaction_01";
+import "./examples/008_interaction_02";
