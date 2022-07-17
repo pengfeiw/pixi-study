@@ -10,4 +10,5 @@
 // import "./examples/008_interaction_02";
 // import "./examples/009_culling";
 // import "./examples/010_animatedSprite";
-import "./examples/011_spriteSheet";
+// import "./examples/011_spriteSheet";
+import "./examples/012_text";
