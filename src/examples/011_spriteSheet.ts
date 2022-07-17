@@ -8,6 +8,8 @@
  * SpriteSheet 就是一个包含所有 sprites 的大的图片。使用 SpriteSheet，只需要加载一张图片和一个 json 数据文件
  * 即可。json 数据文件描述了 SpriteSheet 包含了哪些 sprite 图片和这些 sprite 在 sheet 中的坐标。
  * 
+ * 制作 spritesheet 图片和 json 文件推荐使用 https://www.codeandweb.com/tp-online 在线工具
+ * 
  */
 import * as PIXI from "pixi.js";
 import backgroundImg from "../assests/spritesheet/background.png";
