@@ -7,4 +7,7 @@
 // import "./examples/006_anchor";
 // import "./examples/007_pivot";
 // import "./examples/008_interaction_01";
-import "./examples/008_interaction_02";
+// import "./examples/008_interaction_02";
+// import "./examples/009_culling";
+// import "./examples/010_animatedSprite";
+import "./examples/011_spriteSheet";
