@@ -11,7 +11,7 @@ import pandapng from "../assests/panda.png";
 const app = new PIXI.Application({ antialias: true });
 document.body.appendChild(app.view);
 
-// app.stage.interactive = true;
+app.stage.interactive = true;
 
 const bg = PIXI.Sprite.from(bg_rotate);
 
@@ -69,6 +69,7 @@ const help = new PIXI.Text('Click or tap to turn masking on / off.', {
     fontWeight: 'bold',
     fill: 'white',
 });
+
 help.y = app.screen.height - 26;
 help.x = 10;
 app.stage.addChild(help);
